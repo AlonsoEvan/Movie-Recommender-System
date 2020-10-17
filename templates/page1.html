@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Discover Movies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg{
+    background-image: img src = 'image.png';
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+input[type="text"]
+{
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    outline: none;
+}
+
+.button{background-color: #e7e7e7; color: black;} /* Gray */ 
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id="container">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <button class="w3-button w3-round" style="color:white;" onclick="window.location.href='{{ url_for('mainpage')}}'">Home </button> </p>
+  </div>
+  <div class="w3-display-middle">
+    <b class="w3-jumbo w3-animate-top w3-center" style="color:red;">Discover Movies !</b>
+    <p align="center" style="color:white;"> Enter your favorite movie, and we will recommend other movies you will enjoy. </p>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <form class="w3-container" method=post name=userinput action="{{ url_for('printmovie')}}">
+    <p>
+      <div class="transbox">
+        <input class="w3-input transbox" type="text" style="color:white;" name="userinput">
+      </div>
+    <p align="center">
+    <button type="submit" class="w3-button w3-round w3-red" style="color:white;" >Get your personal recommendations
+    </button> </p>
+    </form method=post name=userinput action="{{ url_for('printmovie')}}">
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Alonso Evan
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Discover Movies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: img src = 'image.jpg';
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+ 
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <button class="w3-button w3-round" style="color:white;" onclick="window.location.href='{{ url_for('mainpage')}}'">Home</button> </p>
+  </div>
+
+  <div class="w3-display-middle" style="color:white;" size=6>
+    <table>
+      <tr>
+        <p><font face="verdana" size=4><th>{{result[0]}}</th></font></p>
+      </tr>
+      <tr>
+        <th>{{result[1]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[2]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[3]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[4]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[5]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[6]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[7]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[8]}}</th>
+      </tr>
+      <tr>
+        <th>{{result[9]}}</th>
+      </tr> 
+    </table>
+  </div>
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    Alonso Evan
+  </div>
+</div>
+
+</body>
+</html>
