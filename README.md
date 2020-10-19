@@ -16,3 +16,8 @@ The raw data is from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-data
 
 ## Website link
 [Link to the web app](https://immense-castle-88704.herokuapp.com/)
+
+
+## Nota Bene
+
+Due to memory constraint with Heroku (512MB by website), I couldn't put all the database. Therefore it's possible than my model doesn't recognize some well known movies.
